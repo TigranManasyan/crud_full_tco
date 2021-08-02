@@ -37,7 +37,11 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Post::create($request->all());
+        return response()->json([
+            'message'=>'Row successfully inserted',
+            'data' => []
+        ]);
     }
 
     /**
@@ -48,7 +52,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return $post;
     }
 
     /**
@@ -71,7 +75,11 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $post -> update($request->all());
+        return response()->json([
+            'message' => 'Post successfully updated',
+            'data' => []
+        ]);
     }
 
     /**
@@ -82,6 +90,11 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return response()->json([
+            'message' => 'Post successfully deleted',
+            'data' => []
+        ]);
+
     }
 }

@@ -1,7 +1,9 @@
 <template>
   <div>
+
+    <b-button variant="danger">Click me</b-button>
       <b-navbar class="p-3" toggleable="lg" type="dark" variant="info">
-        <b-navbar-brand href="#">NavBar</b-navbar-brand>
+        <b-navbar-brand href="#" style='color:blue'>NavBar</b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
